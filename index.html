@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="margin: 40px 100px;" action="">
+        <input  type="number" name="dollar" style="margin: 10px;"
+        placeholder="USD Dollar">
+        <div class="result">{ <span></span> } USD Dollar = {<span></span>} Egyptian pound</div>
+    </form>
+    <script>
+        let result = document.querySelector('.result');
+        let inp = document.getElementsByTagName('input')[0];
+        let dollar = document.getElementsByTagName('span')[0];
+        let pound = document.getElementsByTagName('span')[1];
+        inp.oninput = function (){
+            dollar.innerHTML = inp.value ;
+            pound.innerHTML =  (inp.value * 30.73).toFixed(2);
+            
+        }
+        // input.value * 15.6 = pound.innerHTML;
+
+    </script>
+</body>
+</html>
